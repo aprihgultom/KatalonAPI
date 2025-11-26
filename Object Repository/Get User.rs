@@ -1,29 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>Create User</name>
+   <name>Get User</name>
    <tag></tag>
-   <elementGuidId>efa6437f-494d-4653-acc7-167a359998a5</elementGuidId>
+   <elementGuidId>a73c49d6-d261-4449-8462-73bec20adef4</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
-   <autoUpdateContent>false</autoUpdateContent>
+   <autoUpdateContent>true</autoUpdateContent>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>true</followRedirects>
    <httpBody></httpBody>
-   <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n    \&quot;name\&quot;: \&quot;${name}\&quot;,\n    \&quot;job\&quot;: \&quot;${job}\&quot;\n}&quot;,
-  &quot;contentType&quot;: &quot;application/json&quot;,
-  &quot;charset&quot;: &quot;UTF-8&quot;
-}</httpBodyContent>
-   <httpBodyType>text</httpBodyType>
+   <httpBodyContent></httpBodyContent>
+   <httpBodyType></httpBodyType>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>Content-Type</name>
       <type>Main</type>
       <value>application/json</value>
-      <webElementGuid>4790b4da-114c-4b93-91a8-02cc4f8c84fb</webElementGuid>
+      <webElementGuid>88610418-5c2c-4025-ada1-a71bbee0e0b2</webElementGuid>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -31,14 +27,14 @@
       <name>x-api-key</name>
       <type>Main</type>
       <value>reqres-free-v1</value>
-      <webElementGuid>f71ca05f-2955-4afe-8bcb-961e1f085dd9</webElementGuid>
+      <webElementGuid>6365c211-e0e8-4b22-956e-a51f43c0b53a</webElementGuid>
    </httpHeaderProperties>
    <katalonVersion>9.7.6</katalonVersion>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <path></path>
-   <restRequestMethod>POST</restRequestMethod>
-   <restUrl>https://reqres.in/api/users</restUrl>
+   <restRequestMethod>GET</restRequestMethod>
+   <restUrl>https://reqres.in/api/users?page=${id_user}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -48,18 +44,11 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'bryan'</defaultValue>
+      <defaultValue>2</defaultValue>
       <description></description>
-      <id>19478709-0edb-48b6-a726-d82b96449737</id>
+      <id>426cba1c-89bf-4ec7-839a-942f4729ae54</id>
       <masked>false</masked>
-      <name>name</name>
-   </variables>
-   <variables>
-      <defaultValue>'qa engineer'</defaultValue>
-      <description></description>
-      <id>d6655665-3198-426c-9fca-1646cc9149f3</id>
-      <masked>false</masked>
-      <name>job</name>
+      <name>id_user</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
@@ -73,11 +62,6 @@ import internal.GlobalVariable as GlobalVariable
 
 RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 
-ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-
-assert response.getStatusCode() == 201
-WS.verifyElementPropertyValue(response, &quot;name&quot;, $name)
-WS.verifyElementPropertyValue(response, &quot;job&quot;, $job)
-</verificationScript>
+ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

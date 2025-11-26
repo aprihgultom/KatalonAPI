@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Regression" time="9.063" tests="2" failures="0" errors="0">
+   <testsuite name="Regression" tests="2" failures="0" errors="0" time="9.063" skipped="0" timestamp="26-11-2025T16:11:43" hostname="DELL - Romario-Gultom" id="Test Suites/Regression">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform"/>
+         <property name="logFolder" value="C:\\Users\\DELL\\git\\KatalonAPI\\Reports\\20251126_161124\\Regression\\20251126_161124"/>
+         <property name="logFiles" value="C:\\Users\\DELL\\git\\KatalonAPI\\Reports\\20251126_161124\\Regression\\20251126_161124\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="DELL - Romario-Gultom"/>
+         <property name="hostAddress" value="192.168.100.112"/>
+         <property name="os" value="Windows 11 64bit"/>
+         <property name="katalonVersion" value="9.7.6.223"/>
+      </properties>
+      <testcase name="Test Cases/Get User" time="6.908" classname="Test Cases/Get User" status="PASSED">
+         <system-out><![CDATA[26-11-2025T16:11:44 - [TEST_CASE][PASSED] - Test Cases/Get User: Test Cases/Get User
+
+26-11-2025T16:11:45 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("Object Repository/Get User", ["id_user":"2"])): Send request successfully
+
+26-11-2025T16:11:50 - [MESSAGE][INFO] - HAR: C:\Users\DELL\git\KatalonAPI\Reports\20251126_161124\Regression\20251126_161124\requests\main\0.har
+
+26-11-2025T16:11:50 - [MESSAGE][PASSED] - Send request successfully
+
+26-11-2025T16:11:50 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+26-11-2025T16:11:50 - [MESSAGE][PASSED] - Verify response status code successfully
+
+26-11-2025T16:11:50 - [TEST_STEP][PASSED] - verifyElementPropertyValue(response, "page", "2"): Verify element property value successfully
+
+26-11-2025T16:11:50 - [MESSAGE][PASSED] - Verify element property value successfully
+
+26-11-2025T16:11:50 - [TEST_STEP][PASSED] - verifyElementPropertyValue(response, "data[1].first_name", "Lindsay"): Verify element property value successfully
+
+26-11-2025T16:11:51 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Create User" time="1.561" classname="Test Cases/Create User" status="PASSED">
+         <system-out><![CDATA[26-11-2025T16:11:51 - [TEST_CASE][PASSED] - Test Cases/Create User: Test Cases/Create User
+
+26-11-2025T16:11:51 - [TEST_STEP][PASSED] - request = sendRequest(findTestObject("Object Repository/Create User", ["url":strUrl, "name":strName, "job":strJob])): Send request successfully
+
+26-11-2025T16:11:52 - [MESSAGE][INFO] - HAR: C:\Users\DELL\git\KatalonAPI\Reports\20251126_161124\Regression\20251126_161124\requests\main\1.har
+
+26-11-2025T16:11:52 - [MESSAGE][PASSED] - Send request successfully
+
+26-11-2025T16:11:52 - [TEST_STEP][PASSED] - request.getStatusCode() == 201: null
+
+26-11-2025T16:11:52 - [TEST_STEP][PASSED] - verifyElementPropertyValue(request, "name", strName): Verify element property value successfully
+
+26-11-2025T16:11:52 - [MESSAGE][PASSED] - Verify element property value successfully
+
+26-11-2025T16:11:52 - [TEST_STEP][PASSED] - verifyElementPropertyValue(request, "job", strJob): Verify element property value successfully
+
+26-11-2025T16:11:52 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[26-11-2025T16:11:43 - [TEST_SUITE][PASSED] - Regression: Test Cases/Create User]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

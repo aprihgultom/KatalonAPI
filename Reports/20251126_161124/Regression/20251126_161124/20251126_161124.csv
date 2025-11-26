@@ -1,0 +1,14 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Regression,,,,26-11-2025 16:11:43,26-11-2025 16:11:52,9.063s,PASSED
+,,,,,,,
+Test Cases/Get User,,,,26-11-2025 16:11:44,26-11-2025 16:11:51,6.908s,PASSED
+"response = sendRequest(findTestObject(""Object Repository/Get User"", [""id_user"":""2""]))",,,,26-11-2025 16:11:45,26-11-2025 16:11:50,5.105s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,26-11-2025 16:11:50,26-11-2025 16:11:50,0.165s,PASSED
+"verifyElementPropertyValue(response, ""page"", ""2"")",,,,26-11-2025 16:11:50,26-11-2025 16:11:50,0.429s,PASSED
+"verifyElementPropertyValue(response, ""data[1].first_name"", ""Lindsay"")",,,,26-11-2025 16:11:50,26-11-2025 16:11:51,0.140s,PASSED
+,,,,,,,
+Test Cases/Create User,,,,26-11-2025 16:11:51,26-11-2025 16:11:52,1.561s,PASSED
+"request = sendRequest(findTestObject(""Object Repository/Create User"", [""url"":strUrl, ""name"":strName, ""job"":strJob]))",,,,26-11-2025 16:11:51,26-11-2025 16:11:52,0.793s,PASSED
+request.getStatusCode() == 201,,,,26-11-2025 16:11:52,26-11-2025 16:11:52,0.036s,PASSED
+"verifyElementPropertyValue(request, ""name"", strName)",,,,26-11-2025 16:11:52,26-11-2025 16:11:52,0.155s,PASSED
+"verifyElementPropertyValue(request, ""job"", strJob)",,,,26-11-2025 16:11:52,26-11-2025 16:11:52,0.217s,PASSED
